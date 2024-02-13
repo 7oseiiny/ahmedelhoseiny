@@ -1,0 +1,16 @@
+.menus_{
+    background-color: black;
+    color: white;
+    padding: 5px;
+    .active {
+        color: red; /* Change the color for active link */
+      }
+    a {
+        color: white; 
+        text-decoration: none; 
+      }
+      
+      a:hover {
+        color: white; 
+      }
+}

@@ -1,0 +1,21 @@
+.Navbar_{
+    padding: 10px;
+    .search{
+        border-radius: 200px;
+        width: 300px;
+        padding: 10px;
+    }
+    .w-{
+        width: 350px;
+    }
+}
+.cartnum{
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+}
