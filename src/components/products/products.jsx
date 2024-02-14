@@ -41,7 +41,7 @@ export default function Products() {
                 {
                     products.map((prod, i) => {
                         return (
-                            <div onClick={() => { setCurrentProduct(i) }} class="card col-2 m-2   " style={{ width: "18rem;" }}>
+                            <div onClick={() => { setCurrentProduct(i); window.scrollTo(0, 100) }} class="card col-2 m-2   " style={{ width: "18rem;" }}>
                                 <div style={{ height: "200px", overflow: "hidden" }}>
                                     <img src={prod.image} class="card-img-top" alt="..." />
                                 </div>
