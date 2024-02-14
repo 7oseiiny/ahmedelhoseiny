@@ -13,9 +13,10 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        index:true,
+        index: true,
         element: <Products />
       }
     ],
   },
 ]);
+//sdajksnjk
