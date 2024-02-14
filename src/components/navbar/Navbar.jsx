@@ -28,14 +28,14 @@ export default function Navbar() {
 
 
 
-                    <div class="dropdown ">
-                        <button class=" d-flex justify-content-center align-items-center  btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="dropdown" >
+                        <button style={{ backgroundColor: "transparent" }} class=" d-flex justify-content-center align-items-center  btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <FaCartArrowDown />
-                            <h5>cart</h5>
+                            <h5 className='mx-2' style={{ color: "black" }}>cart</h5>
                             <div className='cartnum'>{numberOfItems}</div>
                         </button>
                         <ul class="dropdown-menu">
-                            <Cart/>
+                            <Cart />
                         </ul>
                     </div>
 
