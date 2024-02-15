@@ -3,14 +3,19 @@ import './navbar.scss'
 import { SiAdidas } from "react-icons/si";
 import { FaCartArrowDown, FaHeart } from "react-icons/fa";
 import { IoMdPerson } from "react-icons/io";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Cart from '../cart/cart';
+import { togglecartstate } from '../../servces/cart';
 
 
 
 export default function Navbar() {
+    let dispatch = useDispatch()
     let cart = useSelector((state) => state.cart.cart)
     let [numberOfItems, setnumberOfItems] = useState(0)
+    let cartstate = useSelector(state => state.cart.cartstate)
+    function togglecart() { dispatch(togglecartstate()) }
+
     useEffect(() => {
         let totalQuantity = 0;
         for (const item of cart) {
@@ -28,15 +33,13 @@ export default function Navbar() {
 
 
 
-                    <div class="dropdown" >
-                        <button style={{ backgroundColor: "transparent" }} class=" d-flex justify-content-center align-items-center  btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="d-flex align-items-center" >
+                        <div className='d-flex align-items-center notification' onClick={togglecart} style={{ backgroundColor: "transparent" }}  >
                             <FaCartArrowDown />
-                            <h5 className='mx-2' style={{ color: "black" }}>cart</h5>
-                            <div className='cartnum'>{numberOfItems}</div>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <Cart />
-                        </ul>
+                            <h5 className='mx-2 ' style={{ color: "black" }}>cart</h5>
+                            <div className='badge'>{numberOfItems}</div>
+                        </div>
+                        {<Cart />}
                     </div>
 
 
